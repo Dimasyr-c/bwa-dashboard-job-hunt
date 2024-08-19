@@ -19,8 +19,6 @@ const FieldInput: React.FC<FieldInputProps> = ({ title, subtitle, children }) =>
             {children}
         </div>
         <Separator />
-
-
         </>
     )
 }

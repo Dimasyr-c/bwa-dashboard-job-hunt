@@ -1,3 +1,5 @@
+"use client";
+
 import React, { FC } from 'react';
 import { Button } from '../../button';
 import { Ghost } from 'lucide-react';
@@ -9,11 +11,15 @@ import { CgFileDocument } from "react-icons/cg";
 import { AiOutlineSchedule } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
+import { useRouter } from 'next/navigation';
 
 interface SidebarProps {
 
 }
 const Sidebar: FC<SidebarProps> = ({ }) => {
+    const router = useRouter();
+
+
     return (
       <div className="pb-12 min-h-screen">
         <div className='space-y-4 py-4'>
@@ -24,6 +30,7 @@ const Sidebar: FC<SidebarProps> = ({ }) => {
                 <div className='space-y-3'>
                     <Button variant={'ghost'} 
                     className='w-full justify-start rounded-none  hover:text-primary'
+                    onClick={() => router.push("/")}
                     >
                     <BiHome className='m-2 text-lg'/>
                         Home
@@ -48,6 +55,7 @@ const Sidebar: FC<SidebarProps> = ({ }) => {
                     </Button>
                     <Button variant={'ghost'} 
                     className='w-full justify-start rounded-none  hover:text-primary'
+                    onClick={() => router.push("/job-listings")}
                     >
                     <CgFileDocument className='m-2 text-lg'/>
                         Job Listing

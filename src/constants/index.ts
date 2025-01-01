@@ -28,3 +28,12 @@ export const JOB_LISTING_DATA=[
     needs: 10
     }
 ]
+
+export const JOB_APPLICANT_COLUMNS: string[] = ["Name"];
+
+export const JOB_APPLICANTS_DATA = [
+    {
+      name: "John Doe",
+      appliedDate: "2022-01-01",
+    },
+  ];
